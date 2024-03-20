@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #FDFDFD;
+    color: #07060E;
+    text-align: center;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #FF7829;
+    color: #FDFDFD;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo a, .navbar a {
+    text-decoration: none;
+    color: #FDFDFD;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 5px;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a:hover, .btn:hover {
+    background-color: #FFD8B1;
+    color: #07060E;
+}
+
+.conter.header {
+    background: url('img/header.jpg') no-repeat center center;
+    background-size: cover;
+    color: #FDFDFD;
+    padding-top: 60px; /* Offset for fixed navbar */
+    padding-bottom: 20px;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.text, .content .text {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    padding: 0 50px;
+}
+
+.btn-home .btn, .content .btn {
+    display: inline-block;
+    background-color: #FF7829;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 100px; /* Adjust based on header size */
+}
+
+.sau, .about, .contact {
+    background-color: #FFD8B1;
+    color: #07060E;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form input, form textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input[type=submit] {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .navbar, .logo {
+        flex-direction: column;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .text, .content .text {
+        font-size: 0.9rem;
+    }
+}

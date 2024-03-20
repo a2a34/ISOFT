@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TEConecta</title>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="#">Instituto Tecnológico de Tepic</a>
+        </div>
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Áreas Académicas</a>
+            <a href="#">Foro</a>
+            <a href="subir_documento.html">Subir Documentos</a>
+            <a href="descargar_materiales.html">Descargar Materiales</a>
+        </nav>
+    </div>
+
+    <header class="conter header">
+        <h2 class="title">TEConecta</h2>
+        <p class="text">
+            Plataforma dedicada para alumnos y docentes del ITTepic para compartir y acceder a materiales educativos, participar en foros de discusión, y mucho más.
+        </p>
+        <div class="btn-home">
+            <a href="#" class="btn">Conocer más</a>
+        </div>
+    </header>
+
+    <section class="content sau">
+        <h2 class="title">Alumnos y Docentes</h2>
+        <p class="text">
+            Sección dedicada para la disposición de documentos importantes para alumnos y docentes.
+        </p>
+        <div class="upload-doc">
+            <h3>Subir Documentos</h3>
+            <form action="/subir_documento" method="post" enctype="multipart/form-data">
+                <input type="file" name="documento" required>
+                <input type="submit" value="Subir Documento">
+            </form>
+        </div>
+        <div class="download-doc">
+            <h3>Descargar Documentos</h3>
+            <form action="/buscar_documento" method="get">
+                <input type="text" name="buscar" placeholder="Buscar documento...">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+    </section>
+
+    <section class="content about">
+        <h2 class="title">Nosotros</h2>
+        <p class="text">
+            Conoce más sobre el equipo detrás de TEConecta, nuestra misión, visión y valores.
+        </p>
+        <a href="#" class="btn">Saber más</a>
+    </section>
+
+    <section class="content contact">
+        <h2 class="title">Contacto</h2>
+        <p class="text">
+            ¿Tienes preguntas? Puedes contactarnos a través de nuestro número: 3114563435 o mediante nuestro formulario de contacto.
+        </p>
+        <form action="/enviar_mensaje" method="post">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+            <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>
